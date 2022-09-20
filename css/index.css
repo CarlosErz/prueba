@@ -1,0 +1,85 @@
+@import url(var.css);
+
+body {
+    background-color: var(--background-color);
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+h1, h2, p {
+    color: var(--letras);
+    text-align: center;
+    margin-bottom: 80%;
+    font-family: 'Dangrek', cursive;
+
+}
+
+h1 {
+    font-size: 500%;
+    margin-top: 350px;
+}
+
+h2 {
+    font-size: 300%;
+}
+
+p {
+    font-size: 300%;
+    margin-bottom: 100%;
+}
+
+span {
+    color: rgb(252, 255, 86);
+}
+
+.red {
+    color: var(--heart);
+}
+
+.heart {
+    height: 250px;
+    width: 250px;
+    background-color: var(--heart);
+    margin: 0 auto;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px -10px 90px var(--heart);
+    animation: heart 0.6s linear infinite;
+
+}
+@keyframes heart {
+    0%{
+        transform:  rotate(-45deg) scale(1.07);
+    }
+    80%{
+        transform:  rotate(-45deg) scale(1.0);
+    }
+    100%{
+        transform:  rotate(-45deg) scale(0.8);
+    }
+}
+
+.heart::before {
+    content: "";
+    position: absolute;
+    height: 250px;
+    background-color: var(--heart);
+    width: 250px;
+    top: -133px;
+    border-radius: 125px;
+    box-shadow: -10px -10px 90px var(--heart);
+}
+
+.heart::after {
+    content: "";
+    position: absolute;
+    height: 250px;
+    background-color: var(--heart);
+    width: 250px;
+    right: -129px;
+    box-shadow: -10px -10px 90px var(--heart);
+    border-radius: 125px;
+}
